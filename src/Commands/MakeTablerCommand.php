@@ -16,7 +16,7 @@ class MakeTablerCommand extends GeneratorCommand
 
     protected function getStub()
     {
-        return __DIR__.'/stubs/tabler.stub';
+        return __DIR__.'/../../stubs/tabler.stub';
     }
 
     protected function getDefaultNamespace($rootNamespace)
