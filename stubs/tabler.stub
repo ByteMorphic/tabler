@@ -1,0 +1,57 @@
+<?php
+
+namespace {{ namespace }};
+
+use {{ modelClass }};
+use bytemorphic\Tabler\Table;
+use bytemorphic\Tabler\Columns;
+use bytemorphic\Tabler\Filters;
+use bytemorphic\Tabler\Action;
+use bytemorphic\Tabler\Export;
+
+class {{ class }} extends Table
+{
+    protected string $resource = {{ modelClass }}::class;
+    
+    protected string $defaultSort = 'id';
+    
+    protected $perPageOptions = [10, 25, 50, 100];
+    
+    protected array $search = [];
+    
+    public function columns(): array
+    {
+        return [
+            // Columns\TextColumn::make('id', 'ID')->sortable(),
+            // Add your columns here
+        ];
+    }
+    
+    public function filters(): array
+    {
+        return [
+            // Filters\TextFilter::make('name'),
+            // Add your filters here
+        ];
+    }
+    
+    public function actions(): array
+    {
+        return [
+            // Action::make([
+            //     'label' => 'Edit',
+            //     'url' => fn ({{ modelVariable }}) => route('{{ modelVariable }}s.edit', ${{ modelVariable }}),
+            //     'icon' => 'PencilIcon',
+            // ]),
+            // Add your actions here
+        ];
+    }
+    
+    public function exports(): array
+    {
+        return [
+            // Export::make('Excel export', 'xlsx'),
+            // Add your exports here
+        ];
+    }
+}
