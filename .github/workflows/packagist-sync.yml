@@ -1,0 +1,9 @@
+uses: hotaruma/packagist-sync@v1.0.1
+with:
+  api-token: ${{ secrets.packagist_token }}
+
+  # Optional Parameters
+  packagist-username: 'bytemorphic'
+  package-name: 'bytemorphic/tabler'
+  github-repository-url: 'https://github.com/bytemorphic/tabler'
+  packagist-domain: 'https://packagist.org'
